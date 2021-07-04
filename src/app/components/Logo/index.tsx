@@ -6,8 +6,8 @@ import CarLogoImg from '../../../assets/images/car-logo.png';
 import CarLogoDarkImg from '../../../assets/images/car-logo-dark.png';
 
 interface ILogoProps {
-    color?: 'white' | 'dark';
-    bgColor?: 'white' | 'dark';
+  color?: 'white' | 'dark';
+  bgColor?: 'white' | 'dark';
 }
 
 const LogoContainer = styled.div`
@@ -29,15 +29,15 @@ const Image = styled.div`
   }
 `;
 
-export function Logo(props: ILogoProps): React.ReactElement {
-    const { color, bgColor } = props;
+export function Logo(props: ILogoProps) {
+  const { color, bgColor } = props;
 
-    return (
-        <LogoContainer>
-            <Image>
-                <img src={bgColor === 'dark' ? CarLogoDarkImg : CarLogoImg} />
-            </Image>
-            <LogoText color={color || 'dark'}>Yourcar.</LogoText>
-        </LogoContainer>
-    );
+  return (
+    <LogoContainer>
+      <Image>
+        <img src={bgColor === 'dark' ? CarLogoDarkImg : CarLogoImg} />
+      </Image>
+      <LogoText color={color || 'dark'}>Yourcar.</LogoText>
+    </LogoContainer>
+  );
 }

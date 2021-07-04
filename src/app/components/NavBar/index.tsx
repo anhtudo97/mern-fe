@@ -11,7 +11,7 @@ const NavbarContainer = styled.div`
 
 const LogoContainer = styled.div``;
 
-export function Navbar() {
+export const Navbar = () => {
   return (
     <NavbarContainer>
       <LogoContainer>
@@ -20,4 +20,4 @@ export function Navbar() {
       <NavItems />
     </NavbarContainer>
   );
-}
+};
