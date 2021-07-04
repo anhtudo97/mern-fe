@@ -1,61 +1,23 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import tw from 'twin.macro';
-import { slide as Menu } from 'react-burger-menu';
-import { useMediaQuery } from 'react-responsive';
-import { SCREENS } from '../responsive';
-import menuStyles from './MenuStyles';
+import { Logo } from '../Logo';
+import { NavItems } from './NavItems';
 
-const ListContainer = styled.ul`
-  ${tw`flex list-none `};
+const NavbarContainer = styled.div`
+  min-height: 68px;
+  ${tw`flex flex-row items-center justify-between w-full px-4 max-w-screen-2xl sm:px-8 md:px-10 lg:px-12 `};
 `;
 
-const NavItem = styled.li<{ menu?: any }>`
-  ${tw`mr-1 text-sm font-medium text-black transition duration-300 ease-in-out cursor-pointer  md:text-base md:mr-5 hover:text-gray-700`};
-  ${({ menu }) =>
-    menu &&
-    css`
-      ${tw`mb-3 text-xl text-white  focus:text-white`};
-    `};
-`;
+const LogoContainer = styled.div``;
 
-export function NavItems() {
-  const isMobile = useMediaQuery({ maxWidth: SCREENS.sm });
-
-  if (isMobile)
-    return (
-      <Menu right styles={menuStyles}>
-        <ListContainer>
-          <NavItem menu>
-            <a href="#">Home</a>
-          </NavItem>
-          <NavItem menu>
-            <a href="#">Cars</a>
-          </NavItem>
-          <NavItem menu>
-            <a href="#">Services</a>
-          </NavItem>
-          <NavItem menu>
-            <a href="#">Contact Us</a>
-          </NavItem>
-        </ListContainer>
-      </Menu>
-    );
-
+export function Navbar() {
   return (
-    <ListContainer>
-      <NavItem>
-        <a href="#">Home</a>
-      </NavItem>
-      <NavItem>
-        <a href="#">Cars</a>
-      </NavItem>
-      <NavItem>
-        <a href="#">Services</a>
-      </NavItem>
-      <NavItem>
-        <a href="#">Contact Us</a>
-      </NavItem>
-    </ListContainer>
+    <NavbarContainer>
+      <LogoContainer>
+        <Logo />
+      </LogoContainer>
+      <NavItems />
+    </NavbarContainer>
   );
 }
