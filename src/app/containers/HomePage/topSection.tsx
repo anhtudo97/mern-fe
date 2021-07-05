@@ -97,7 +97,7 @@ const ButtonsContainer = styled.div`
   ${tw`flex flex-wrap mt-4 `};
 `;
 
-export const TopSection = (): React.ReactElement => {
+export function TopSection() {
   return (
     <TopSectionContainer>
       <LeftContainer>
@@ -122,4 +122,4 @@ export const TopSection = (): React.ReactElement => {
       </RightContainer>
     </TopSectionContainer>
   );
-};
+}
