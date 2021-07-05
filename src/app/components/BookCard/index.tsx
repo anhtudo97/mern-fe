@@ -1,4 +1,4 @@
-import React, { useCallback, useReducer, useState } from 'react';
+import React, { useCallback, useReducer } from 'react';
 import {
   faCalendarAlt,
   faCaretDown,
@@ -122,7 +122,7 @@ const reducer = (state: InitialState, action: ACTION) => {
   }
 };
 
-export const BookCard = () => {
+export function BookCard() {
   const [state, dispatch] = useReducer(reducer, initialState);
   const { startDate, returnDate, isStartCalendarOpen, isReturnCalendarOpen } =
     state;
@@ -200,4 +200,4 @@ export const BookCard = () => {
       <Button text="Book Your Ride" />
     </CardContainer>
   );
-};
+}

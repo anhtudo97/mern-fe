@@ -20,7 +20,7 @@ const NavItem = styled.li<{ menu?: any }>`
     `};
 `;
 
-export const NavItems = () => {
+export function NavItems() {
   const isMobile = useMediaQuery({ maxWidth: SCREENS.sm });
 
   if (isMobile)
@@ -59,4 +59,4 @@ export const NavItems = () => {
       </NavItem>
     </ListContainer>
   );
-};
+}
