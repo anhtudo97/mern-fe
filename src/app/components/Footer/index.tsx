@@ -6,7 +6,6 @@ import tw from 'twin.macro';
 import { Logo } from '../Logo';
 
 const FooterContainer = styled.div`
-  //min-height: 24em;
   background-color: #1d2124;
   ${tw`flex flex-col items-center justify-center min-w-full pt-10 md:pt-16`};
 `;
